@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-before::before {
+    content: 'OR';
+    display: block;
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    right: 50%; 
+    z-index: 1;
+    color: gray;
+    background-color: white; 
+    font-weight: 500;
+}
+.custom-before::after {
+    content: '';
+    width: 60%;
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    bottom: -33px;
+    left: 23%;
+    right: 50%;
+}
+.custom-button {
+   animation: buttonMoving 1s ease-in-out 1s infinite;
+}
+@keyframes buttonMoving {
+     0%, 100% {
+        scale: 0.90;
+     }
+     50% {
+        scale: 1;
+     }
+}
+@media (max-width: 768px) {
+   .header-nav {
+      position: absolute;
+      left: 0;
+      flex-direction: column;
+      z-index: 100;
+   }
+}
